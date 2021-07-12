@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { Physics } from "use-cannon";
+import { Sky } from "drei";
+import { Canvas } from "react-three-fiber";
 
+import { Ground } from "./Components/Ground";
+import { Player } from "./Components/Player";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Canvas shadowMap sRGC>
+			<Sky sunPosition={[100, 20, 100]} />
+			<ambientLight intensity={0.25} />
+			<pointLight castShadow intensity={0.7} position={[100, 100, 100]} />
+			<Physics>
+				<Ground position={[0, 0.5, 0]} />
+				<Player position={[0, 3, 10]} />
+			</Physics>
+		</Canvas>
+	);
 }
 
 export default App;
