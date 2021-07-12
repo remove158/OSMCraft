@@ -14,6 +14,8 @@ export const Cube = ({ position, type, ...props }) => {
 					attachArray="material"
 					map={textures[type]}
 					key={index}
+					opacity={type === "glass" ? 0.7 : 1}
+					transparent={true}
 				/>
 			))}
 			<boxBufferGeometry attach="geometry" />
