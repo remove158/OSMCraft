@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Canvas } from "react-three-fiber";
 import { Physics } from "use-cannon";
 import { Sky } from "drei";
