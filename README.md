@@ -1,3 +1,3 @@
 # Minecraft Portfolio
 
-This is my minecraft portfolio [visit](https://piyaphat.xyz).
+This is my minecraft portfolio [visit](https://minecraft.piyaphat.xyz).
